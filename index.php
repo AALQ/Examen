@@ -15,26 +15,26 @@ session_start();
     <body>
         <div id="cont">
             
-                <!--<? php
+                <?php
                 if (!isset($_SESSION["oUsuario"])){
                     include './usuario/formlogin.php';
                 }
                 else{
                     $oUsr=$_SESSION["oUsuario"];
-                ?> -->
+                ?>
                 <div id="encabezado">
                     <?php include ('./phps/menu.php'); ?>
                 </div>
                     
                 <div id="contenido">                
-                    <h2>BIENVENIDO <span> <? =$oUsr->getNombre();?>  </span> Lo Tenemos TODO</h2>
+                    <h2>BIENVENIDO <span> <?=$oUsr->getNombre();?>  </span> Lo Tenemos TODO</h2>
                 <?php
                     date_default_timezone_set('Chile/Continental');
                     $time = time();
                     echo date("d-m-Y (H:i:s)", $time);
                 ?>
                 </div>
-                <!--<a href="logout.php">Salir</a> <? php }?>-->
+                <a href="logout.php">Salir</a> <?php }?>
             </div>
 
             
